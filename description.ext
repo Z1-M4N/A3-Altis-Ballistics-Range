@@ -1,0 +1,66 @@
+class Header
+{
+gameType 			= 	Coop; 
+minPlayers 			= 	1; 
+maxPlayers 			= 	28; 
+};
+
+author 						= 	"Z1 M4N";
+
+briefingName 				= 	"Altis Ballistics Range V1.9.3.3";
+OnLoadName 					= 	"Altis Ballistics Range V1.9.3.3";
+overviewText 				= 	"Ballistics range for training and weapons familiarization.";
+
+onLoadIntro 				= 	"Altis Ballistics Range V1.9.3.3";
+onLoadMission 				= 	"Ballistics range for training and weapons familiarization.";
+loadScreen                  =   "img\preview\loading_screen.paa";
+joinUnassigned 				= 	1;
+disabledAI 					= 	1;
+
+respawnDialog 				= 	0;
+respawn 					= 	"BASE";
+respawnDelay 				= 	5;
+respawnTemplates[] 			= 	{"MenuPosition"};
+respawnOnStart 				= 	0; //-1 - Dont respawn on start. Don't run respawn script on start, 0 - Dont respawn on start. Run respawn script on start, 1 - Respawn on start. Run respawn script on start.
+
+
+briefing 					= 	-1;
+debriefing 					= 	-1;
+
+showGPS 					= 	1;
+showUAVFeed 				= 	1;
+allowFunctionsRecompile 	= 	1;
+
+enableDebugConsole[] = {"76561198100534647", "76561198140513211", "76561198854795665", "76561198065233777","76561198001180114"};  // Enables Debug Console for players with specified UIDs (BroBeans, Stevie Wonder, McFur, Pope, Haydos) and Host/Admin
+enableTargetDebug = 1;
+
+//Place any script required entries after this comment
+
+
+class CfgFunctions {
+	class TFR {
+		class units {
+			file = "fnc\units";			
+			class garrisonBuilding {};
+			class garrisonUnit {};
+		};
+		class misc {
+			file = "fnc\misc";			
+			class getConfig {};
+			class lodgeTime {};
+			class strategicMapOpen {};
+			class checkTimes {};
+			class launchSkeet {};
+		};
+		class halo {
+			file = "fnc\halo";			
+			class moveToAircraft {};
+			class beginJump {};
+		};
+		class redepoy {
+			file = "fnc\redeploy";
+			class initRedeploy {};
+			class openRedeployMap {};
+		}
+	};
+};
